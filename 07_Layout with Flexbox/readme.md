@@ -75,4 +75,59 @@ justifyContent를 center로 설정하면 아래와 같이 변하게 됩니다.
 
 // Try setting `flexDirection` to `row`.
 
-flexDirection을 
+flexDirection을 row로 설정하면 아래와 같이 나오게 됩니다.
+
+![Alt text](result05.png)
+
+## Align Items
+
+Align Items은 보조 축을 따라 자식 정렬을 결정합니다.<br>
+사용할 수 있는 옵션으로는 flex-start, center, flex-end, stretch 가 있습니다.
+
+    import React, { Component } from 'react';
+    import { AppRegistry, View } from 'react-native';
+
+    export default class AlignItemsBasics extends Component {
+    render() {
+        return (
+        // Try setting `alignItems` to 'flex-start'
+        // Try setting `justifyContent` to `flex-end`.
+        // Try setting `flexDirection` to `row`.
+        <View style={{
+            flex: 1,
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+        }}>
+            <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+            <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+            <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+        </View>
+        );
+    }
+    };
+
+    // skip this line if using Create React Native App
+    AppRegistry.registerComponent('AwesomeProject', () => AlignItemsBasics);
+
+![Alt text](result06.png)
+
+// Try setting `alignItems` to 'flex-start'
+
+alignItems를 flex-start로 바꿔주면 아래와 같습니다.
+
+![Alt text](result07.png)
+
+// Try setting `justifyContent` to `flex-end`.
+
+justifyContent를 flex-end로 바꿔주면 아래와 같습니다.
+
+![Alt text](result08.png)
+
+// Try setting `flexDirection` to `row`.
+
+flexDirection를 row로 바꿔주면 아래와 같습니다.
+
+![Alt text](result09.png)
+
+Layout Props : https://facebook.github.io/react-native/docs/layout-props.html
